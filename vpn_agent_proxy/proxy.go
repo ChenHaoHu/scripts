@@ -34,10 +34,6 @@ func main() {
 			continue
 		}
 
-		// Modify source IP address
-		localIP := net.ParseIP("127.0.0.1")
-		conn.LocalAddr().(*net.TCPAddr).IP = localIP
-
 		// Establish a connection to a remote server
 		remoteConn, err := net.DialTCP("tcp", nil, remoteAddr)
 		if err != nil {
@@ -45,10 +41,6 @@ func main() {
 			conn.Close()
 			continue
 		}
-
-		// Modify destination IP address
-		remoteIP := net.ParseIP("127.0.0.1")
-		remoteConn.RemoteAddr().(*net.TCPAddr).IP = remoteIP
 
 		// Forward data
 		go func() {
