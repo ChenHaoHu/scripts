@@ -14,7 +14,7 @@
 
     var targetNode = document.getElementsByClassName("team-left-column")[1];
 
-    // 创建一个 MutationObserver 实例
+    // Create a MutationObserver instance
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             console.log(mutation)
