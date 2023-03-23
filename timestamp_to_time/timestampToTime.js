@@ -56,6 +56,10 @@ function convertTimestamp(event) {
 	let regex = /\d{10,13}/g;
 
 	let timestamps = cleanText.match(regex);
+	
+	if (timestamps == undefined) {
+		return
+	}
 
 	if (timestamps.length != 0) {
 		let content = 'date convert：<br/>'
