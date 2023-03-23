@@ -6,3 +6,6 @@ Record some interesting scripts
 
 2、[github no changelog](github_no_changelog/remove.js)
 > delete useless changelog display on github homepage
+
+3、[timestamp_to_time](timestamp_to_time/timestampToTime.js)
+> convert the timestamp on your clipboard to time format
